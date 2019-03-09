@@ -4,9 +4,8 @@ namespace BinaryCabin\LaravelToolbelt;
 
 class LaravelToolbelt
 {
-
-    public function test(){
+    public function test()
+    {
         return 'test';
     }
-
 }
