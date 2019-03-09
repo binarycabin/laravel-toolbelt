@@ -1,0 +1,38 @@
+{
+    "name": "binarycabin/laravel-toolbelt",
+    "description": "A handful of helper components and for Laravel",
+    "keywords": ["laravel"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeff Kilroy",
+            "email": "jeffkilroy@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4": {
+            "BinaryCabin\\LaravelToolbelt\\": "src"
+        }
+    },
+    "autoload-dev":{
+        "psr-4": {
+            "BinaryCabin\\LaravelToolbelt\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BinaryCabin\\LaravelToolbelt\\Providers\\LaravelToolbeltServiceProvider"
+            ],
+            "aliases": {
+                "Toolbelt": "BinaryCabin\\LaravelToolbelt\\Facades\\LaravelToolbeltFacade"
+            }
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">5.0",
+        "orchestra/testbench": "^3.5"
+    }
+}
