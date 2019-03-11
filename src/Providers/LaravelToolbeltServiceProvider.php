@@ -14,7 +14,12 @@ class LaravelToolbeltServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if($this->app->runningInConsole()) {
+            $this->commands([
+                \BinaryCabin\LaravelToolbelt\Commands\MakeUser::class,
+                \BinaryCabin\LaravelToolbelt\Commands\InitiateRoles::class,
+            ]);
+        }
     }
 
     /**
