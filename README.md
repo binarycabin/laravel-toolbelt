@@ -17,9 +17,29 @@ composer require binarycabin/laravel-toolbelt
 
 ### Commands
 
-- init:roles (coming soon)
-- make:user (coming soon)
-- make:admin (coming soon)
+#### init:roles
+
+If using spatie/laravel-permission and binarycabin/options, you can auto create your default roles using the command:
+
+```
+php artisan init:roles
+```
+
+Note you should also have ```use HasRoles;``` set on your User Model, and an array of options ready at \App\Options\Role;
+
+#### make:user
+
+Create a new user via cl using 
+
+```
+php artisan make:user
+```
+
+If using spatie/laravel-permission you can set a role for this user via:
+
+```
+php artisan make:user --role=admin
+```
 
 ### Components:
 
